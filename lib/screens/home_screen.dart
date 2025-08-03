@@ -20,6 +20,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   ScrollController _scrollController = ScrollController();
@@ -156,7 +157,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context,MaterialPageRoute(builder: (context) => const WalletPage()));
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const WalletPage(),
+                                  ),
+                                );
                               },
                               child: Icon(
                                 Icons.wallet,
@@ -168,14 +174,18 @@ class _HomeScreenState extends State<HomeScreen> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const ProfilePage()));
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const ProfilePage(),
+                                  ),
+                                );
                               },
                               child: Icon(
                                 Icons.person,
-                                color: Colors.white, size: 30)),
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                            ),
                           ],
                         ),
                       ),

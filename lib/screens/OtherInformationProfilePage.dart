@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class YourInformationProfilePage extends StatelessWidget {
-  const YourInformationProfilePage({super.key});
+class OtherInformationProfilePage extends StatelessWidget {
+  const OtherInformationProfilePage({super.key});
 
-  Widget buildOptionRow(IconData icon, String text) {
+  Widget buildOptionRowOtherInfo(IconData icon, String text) {
     return Padding(
       padding: EdgeInsets.only(left: 15, right: 30),
       child: Row(
@@ -36,12 +36,15 @@ class YourInformationProfilePage extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.only(left: 13),
-          child: Text(
-            "YOUR INFORMATION",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: const Color.fromARGB(255, 10, 9, 9),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "OTHER INFORMATION",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: const Color.fromARGB(255, 10, 9, 9),
+              ),
             ),
           ),
         ),
@@ -49,22 +52,18 @@ class YourInformationProfilePage extends StatelessWidget {
         Container(
           child: Column(
             children: [
-              buildOptionRow(Icons.food_bank, "Your Orders"),
+              buildOptionRowOtherInfo(Icons.share, "Share the app"),
               SizedBox(height: 15),
-              buildOptionRow(Icons.favorite_border, "Your Wishlist"),
+              buildOptionRowOtherInfo(Icons.info, "About us"),
               SizedBox(height: 15),
-              buildOptionRow(Icons.bookmark_border, "Bookmarked Recipes"),
+              buildOptionRowOtherInfo(Icons.privacy_tip, "Account Privacy"),
               SizedBox(height: 15),
-              buildOptionRow(Icons.location_on_outlined, "Address Book"),
-              SizedBox(height: 15),
-              buildOptionRow(Icons.receipt_long, "GST Details"),
-              SizedBox(height: 15),
-              buildOptionRow(Icons.card_giftcard, "E-Gift Cards"),
-              SizedBox(height: 15),
-              buildOptionRow(
-                Icons.medical_services_outlined,
-                "Your Prescriptions",
+              buildOptionRowOtherInfo(
+                Icons.notification_add,
+                "Notification preferences",
               ),
+              SizedBox(height: 15),
+              buildOptionRowOtherInfo(Icons.logout, "Log out"),
             ],
           ),
         ),

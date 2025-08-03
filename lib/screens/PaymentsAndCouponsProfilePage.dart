@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class YourInformationProfilePage extends StatelessWidget {
-  const YourInformationProfilePage({super.key});
+class PaymentsAndCouponsProfilePage extends StatelessWidget {
+  const PaymentsAndCouponsProfilePage({super.key});
 
-  Widget buildOptionRow(IconData icon, String text) {
+  WidgetbuildOptionRowCoupons(IconData icon, String text) {
     return Padding(
       padding: EdgeInsets.only(left: 15, right: 30),
       child: Row(
         children: [
-          Icon(icon, size: 25, color: const Color.fromARGB(255, 150, 142, 142)),
+          Icon(icon, size: 25, color: const Color.fromARGB(255, 150, 142, 142),),
           SizedBox(width: 10),
           Text(
             text,
@@ -36,12 +36,15 @@ class YourInformationProfilePage extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.only(left: 13),
-          child: Text(
-            "YOUR INFORMATION",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "PAYMENTS AND COUPONS",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               color: const Color.fromARGB(255, 10, 9, 9),
+              ),
             ),
           ),
         ),
@@ -49,21 +52,15 @@ class YourInformationProfilePage extends StatelessWidget {
         Container(
           child: Column(
             children: [
-              buildOptionRow(Icons.food_bank, "Your Orders"),
+              WidgetbuildOptionRowCoupons(Icons.wallet, "Wallet"),
               SizedBox(height: 15),
-              buildOptionRow(Icons.favorite_border, "Your Wishlist"),
+              WidgetbuildOptionRowCoupons(Icons.money, "Blinkit Money"),
               SizedBox(height: 15),
-              buildOptionRow(Icons.bookmark_border, "Bookmarked Recipes"),
+              WidgetbuildOptionRowCoupons(Icons.payment, "Payment Settings"),
               SizedBox(height: 15),
-              buildOptionRow(Icons.location_on_outlined, "Address Book"),
-              SizedBox(height: 15),
-              buildOptionRow(Icons.receipt_long, "GST Details"),
-              SizedBox(height: 15),
-              buildOptionRow(Icons.card_giftcard, "E-Gift Cards"),
-              SizedBox(height: 15),
-              buildOptionRow(
-                Icons.medical_services_outlined,
-                "Your Prescriptions",
+              WidgetbuildOptionRowCoupons(
+                Icons.card_giftcard,
+                "Your Collected Rewards",
               ),
             ],
           ),
