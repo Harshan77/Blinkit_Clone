@@ -34,15 +34,15 @@ class _AppearanceProfilePageState extends State<AppearanceProfilePage> {
     return Align(
       alignment: Alignment.centerLeft,
       child: Padding(
-        padding: EdgeInsets.only(left: 10),
+        padding: EdgeInsets.only(left: 0),
         child: Container(
           padding: EdgeInsets.only(left: 20, right: 20),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: const Color.fromARGB(255, 233, 223, 223)),
+            border: Border.all(color: const Color.fromARGB(255, 132, 128, 128)),
           ),
           height: 70,
-          width: 325,
+          width: 330,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

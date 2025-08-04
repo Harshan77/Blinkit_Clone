@@ -13,7 +13,6 @@ import 'package:blinkit_clone/screens/GroceriesList.dart';
 import 'package:blinkit_clone/screens/ProfilePage.dart';
 import 'package:blinkit_clone/screens/WalletPage.dart';
 import 'package:blinkit_clone/screens/SearchAndCategoryHeader.dart';
-import 'package:blinkit_clone/screens/ProfileLogOut.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -113,7 +112,12 @@ class _HomeScreenState extends State<HomeScreen> {
         slivers: [
           SliverToBoxAdapter(
             child: Container(
-              padding: EdgeInsets.only(left: 20, top: 40, right: 50, bottom: 0),
+              padding: EdgeInsets.only(
+                left: 20,
+                top: 40,
+                right: 50,
+                bottom: 20,
+              ),
               color: const Color.fromARGB(255, 202, 190, 50),
               width: double.infinity,
               child: Row(
@@ -172,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const ProfileLogOut(),
+                                builder: (context) => const ProfilePage(),
                               ),
                             );
                           },
@@ -213,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         'assets/images/blinkit_ganesh.jpg',
                         width: double.infinity,
                         height: double.infinity,
-                        fit: BoxFit.cover, //use to fit in complete width screen
+                        fit: BoxFit.cover,
                       ),
                       Positioned(
                         top: 30,
